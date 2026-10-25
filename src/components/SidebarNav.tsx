@@ -32,15 +32,15 @@ export default function SidebarNav({
   onOpenSettings,
 }: SideNavProps) {
   return (
-    <aside className="w-56 h-screen sticky top-0 flex flex-col justify-between p-6 bg-zinc-950/40 backdrop-blur-xl border-r border-zinc-800/60 selection:bg-none">
+    <aside className="sticky top-0 flex h-screen w-56 flex-col justify-between border-r border-(--border-color) bg-(--bg-card)/80 p-6 backdrop-blur-xl selection:bg-none">
       <div className="space-y-8">
-        <div className="w-11 h-11 rounded-2xl bg-linear-to-b from-zinc-800 to-zinc-900 border border-zinc-700/50 flex items-center justify-center shadow-lg shadow-black/40">
-          <Sparkles className="w-5 h-5 text-zinc-200" />
+        <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-(--border-color) bg-(--primary-muted) shadow-lg">
+          <Sparkles className="h-5 w-5 text-(--primary)" />
         </div>
 
         {/* Categories Navigation Group */}
         <div className="space-y-2">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 px-3">
+          <span className="px-3 text-[10px] font-bold uppercase tracking-wider text-(--text-muted)">
             Categories
           </span>
           <nav className="flex flex-col gap-1">
@@ -54,12 +54,12 @@ export default function SidebarNav({
                   onClick={() => onSelectCategory(item.id)}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs transition-all duration-200 cursor-pointer ${
                     isActive
-                      ? "text-white font-semibold bg-zinc-900/90 shadow-sm border border-zinc-800/80"
-                      : "text-zinc-500 hover:text-zinc-200 hover:bg-zinc-900/40"
+                      ? "border border-(--border-color) bg-(--primary-muted) font-semibold text-(--text-main)"
+                      : "text-(--text-muted) hover:bg-(--primary-muted) hover:text-(--text-main)"
                   }`}
                 >
                   <Icon
-                    className={`w-4 h-4 ${isActive ? "text-amber-400" : "text-zinc-500"}`}
+                    className={`h-4 w-4 ${isActive ? "text-(--primary)" : "text-(--text-muted)"}`}
                   />
                   <span>{item.label}</span>
                 </button>
@@ -67,28 +67,28 @@ export default function SidebarNav({
             })}
           </nav>
         </div>
-        <div className="border-t border-gray-300" />
+        <div className="border-t border-(--border-color)" />
 
         {/* Secondary / Controls Group */}
         <div className="space-y-1">
           <button
             onClick={onOpenSettings}
-            className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs text-zinc-500 hover:text-zinc-200 hover:bg-zinc-900/40 transition cursor-pointer"
+            className="flex w-full cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-xs text-(--text-muted) transition hover:bg-(--primary-muted) hover:text-(--text-main)"
           >
-            <SlidersHorizontal className="w-4 h-4 text-zinc-500" />
+            <SlidersHorizontal className="h-4 w-4 text-(--text-muted)" />
             <span>Dial Settings</span>
           </button>
-          <button className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs text-zinc-500 hover:text-zinc-200 hover:bg-zinc-900/40 transition cursor-pointer">
-            <Settings className="w-4 h-4 text-zinc-500" />
+          <button className="flex w-full cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-xs text-(--text-muted) transition hover:bg-(--primary-muted) hover:text-(--text-main)">
+            <Settings className="h-4 w-4 text-(--text-muted)" />
             <span>Preferences</span>
           </button>
         </div>
       </div>
 
       {/* Subtle Bottom Status */}
-      <div className="px-3 py-2 rounded-xl bg-zinc-900/30 border border-zinc-900 text-[11px] text-zinc-500 flex items-center justify-between">
+      <div className="flex items-center justify-between rounded-xl border border-(--border-color) bg-(--bg-page) px-3 py-2 text-[11px] text-(--text-muted)">
         <span>Engine</span>
-        <span className="text-emerald-400 font-mono text-[10px]">Ready</span>
+        <span className="font-mono text-[10px] text-(--primary)">Ready</span>
       </div>
     </aside>
   );

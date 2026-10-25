@@ -13,11 +13,12 @@ export default function Home() {
     // setHeadingSeed((prev) => prev + 1);
     // setParagraphSeed((prev) => prev + 1);
   };
+  const [dialCount, setDialCount] = useState(2);
 
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-zinc-950 flex">
+      <div className="min-h-screen bg-background text-foreground flex">
         {/* Left Side Panel */}
         <SidebarNav
           activeCategory={activeCategory}
@@ -30,7 +31,8 @@ export default function Home() {
         </main>
       </div>
       <Footer />
-      <FloatingDock />
+      <FloatingDock paragraphDial={dialCount} onDialChange={(newCount) => setDialCount(newCount)}
+      />
     </>
   );
 }
