@@ -58,7 +58,7 @@ export default function Home() {
   const rawDial = useSyncExternalStore(
     subscribeToStorage,
     () => localStorage.getItem("lucky_lorem_dial") ?? "2",
-    () => "2"
+    () => "2",
   );
 
   const paragraphDial = useMemo(() => {
@@ -76,7 +76,7 @@ export default function Home() {
   const currentDate = useSyncExternalStore(
     emptySubscribe,
     getClientFormattedDate,
-    () => "Oct 27, 2026"
+    () => "Oct 27, 2026",
   );
 
   // Copy indicators
@@ -179,8 +179,9 @@ export default function Home() {
           </div>
 
           {/* Article Presentation Container */}
-          <article className="relative space-y-8 rounded-3xl border border-zinc-800/80 bg-zinc-950/70 p-6 shadow-2xl backdrop-blur-2xl ring-1 ring-white/5 sm:p-10"
-          aria-label="Floating Controls Dock"
+          <article
+            aria-label="Generated Article Content"
+            className="relative space-y-8 rounded-3xl border-none ring-0 p-4 sm:p-8 md:border md:border-zinc-800/80 md:ring-1 md:ring-white/5 md:p-10 bg-zinc-950/70 shadow-2xl backdrop-blur-2xl transition-all"
           >
             {/* View Switcher Tabs & Reading Time Statistics */}
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800/80 pb-5">
@@ -213,7 +214,8 @@ export default function Home() {
 
               <div className="flex items-center gap-3 font-mono text-xs text-zinc-400">
                 <span>
-                  Words: <strong className="text-zinc-200">{totalWords}</strong> / 500
+                  Words: <strong className="text-zinc-200">{totalWords}</strong>{" "}
+                  / 500
                 </span>
                 <span className="text-zinc-600">•</span>
                 <span className="inline-flex items-center gap-1.5">
@@ -323,7 +325,9 @@ export default function Home() {
                     ) : (
                       <Copy className="h-3.5 w-3.5" />
                     )}
-                    <span>{copiedMarkdown ? "Copied!" : "Copy Full Markdown"}</span>
+                    <span>
+                      {copiedMarkdown ? "Copied!" : "Copy Full Markdown"}
+                    </span>
                   </button>
                 </div>
                 <pre className="rounded-2xl border border-zinc-800/80 bg-zinc-950/80 p-5 font-mono text-xs leading-loose text-zinc-300 whitespace-pre-wrap select-all sm:text-sm">
@@ -341,7 +345,7 @@ export default function Home() {
           onCopyHeading={copyHeading}
           onCopyParagraph={copyParagraph}
         />
-      <Footer />
+        <Footer />
       </main>
     </div>
   );

@@ -55,7 +55,7 @@ export default function BlogCanvas({
                 : "text-(--text-muted) hover:text-foreground"
             }`}
           >
-            <Eye className="w-3.5 h-3.5"/>
+            <Eye className="w-3.5 h-3.5" />
             Formatted Article
           </button>
           <button
@@ -67,18 +67,20 @@ export default function BlogCanvas({
                 : "text-(--text-muted) hover:text-foreground"
             }`}
           >
-            <Code2 className="w-3.5 h-3.5"/>
+            <Code2 className="w-3.5 h-3.5" />
             Markdown
           </button>
         </div>
 
         <div className="flex items-center gap-3 text-xs text-(--text-muted)">
           <span className="font-mono">
-            Words: <strong className="text-(--primary)">{totalWords}</strong> / 500
+            Words: <strong className="text-(--primary)">{totalWords}</strong> /
+            500
           </span>
           <span>•</span>
           <span className="inline-flex items-center gap-1">
-            <Clock className="w-3.5 h-3.5"/> ~{Math.ceil(totalWords / 160)} min read
+            <Clock className="w-3.5 h-3.5" /> ~{Math.ceil(totalWords / 160)} min
+            read
           </span>
         </div>
       </div>
@@ -100,7 +102,7 @@ export default function BlogCanvas({
                   title="Generate New Heading"
                   className="rounded-lg border border-(--border-color) p-1.5 text-(--text-muted) hover:text-foreground hover:border-(--primary) transition cursor-pointer"
                 >
-                  <RotateCw className="w-3.5 h-3.5"/>
+                  <RotateCw className="w-3.5 h-3.5" />
                 </button>
                 <button
                   type="button"
@@ -108,9 +110,9 @@ export default function BlogCanvas({
                   className="inline-flex items-center gap-1 rounded-lg border border-(--border-color) px-2.5 py-1.5 text-xs font-medium text-(--text-muted) hover:text-foreground hover:border-(--primary) transition cursor-pointer"
                 >
                   {copiedHeading ? (
-                    <Check className="w-3.5 h-3.5 text-emerald-400"/>
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
                   ) : (
-                    <Copy className="w-3.5 h-3.5"/>
+                    <Copy className="w-3.5 h-3.5" />
                   )}
                   <span>{copiedHeading ? "Copied" : "Copy Title"}</span>
                 </button>
@@ -144,7 +146,7 @@ export default function BlogCanvas({
                 title="Generate New Paragraphs"
                 className="rounded-lg border border-(--border-color) p-1.5 text-(--text-muted) hover:text-foreground hover:border-(--primary) transition cursor-pointer"
               >
-                <RotateCw className="w-3.5 h-3.5"/>
+                <RotateCw className="w-3.5 h-3.5" />
               </button>
               <button
                 type="button"
@@ -152,9 +154,9 @@ export default function BlogCanvas({
                 className="inline-flex items-center gap-1 rounded-lg border border-(--border-color) px-2.5 py-1.5 text-xs font-medium text-(--text-muted) hover:text-foreground hover:border-(--primary) transition cursor-pointer"
               >
                 {copiedParagraph ? (
-                  <Check className="w-3.5 h-3.5 text-emerald-400"/>
+                  <Check className="w-3.5 h-3.5 text-emerald-400" />
                 ) : (
-                  <Copy className="w-3.5 h-3.5"/>
+                  <Copy className="w-3.5 h-3.5" />
                 )}
                 <span>{copiedParagraph ? "Copied" : "Copy Body"}</span>
               </button>
@@ -186,8 +188,14 @@ export default function BlogCanvas({
               onClick={copyMarkdown}
               className="inline-flex items-center gap-1.5 text-xs font-bold text-(--primary) hover:underline cursor-pointer"
             >
-              {copiedMarkdown ? <Check className="w-3.5 h-3.5 text-emerald-400"/> : <Copy className="w-3.5 h-3.5"/>}
-              <span>{copiedMarkdown ? "Copied All Markdown!" : "Copy Full Markdown"}</span>
+              {copiedMarkdown ? (
+                <Check className="w-3.5 h-3.5 text-emerald-400" />
+              ) : (
+                <Copy className="w-3.5 h-3.5" />
+              )}
+              <span>
+                {copiedMarkdown ? "Copied All Markdown!" : "Copy Full Markdown"}
+              </span>
             </button>
           </div>
           <pre className="p-5 rounded-2xl border border-(--border-color) bg-transparent text-xs sm:text-sm font-mono text-amber-300/90 whitespace-pre-wrap select-all leading-loose">
