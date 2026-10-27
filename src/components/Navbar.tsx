@@ -19,7 +19,7 @@ const navLinks: NavLinks[] = [
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <div className="fixed top-6 left-1/2 z-10 flex -translate-x-1/2 gap-3 rounded-2xl border border-(--border-color) bg-(--bg-card)/90 px-9 py-1.5 backdrop-blur-md">
+    <div className="fixed top-6 left-1/2 z-10 flex -translate-x-1/2 gap-3 rounded-2xl border border-(--border-color) bg-transparent px-9 py-1.5 backdrop-blur-md">
       <nav className="flex gap-6 p-4">
         {navLinks.map((link) => {
           const isActive =
