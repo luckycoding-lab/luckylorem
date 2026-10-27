@@ -62,7 +62,7 @@ export default function FloatingDock({
             <Copy className="h-3.5 w-3.5 text-zinc-500 transition-colors group-hover:text-zinc-300" />
           )}
           <span>Heading</span>
-          <span className="rounded-full border border-zinc-800 bg-transparent px-1.5 py-0.5 text-[10px] font-mono text-zinc-400">
+          <span className="hidden md:block rounded-full border border-zinc-800 bg-transparent px-1.5 py-0.5 text-[10px] font-mono text-zinc-400">
             Ctrl H
           </span>
         </button>
@@ -114,7 +114,7 @@ export default function FloatingDock({
             <Sparkles className="h-3.5 w-3.5" />
           )}
           <span>{copiedParagraph ? "Copied!" : "Copy Body"}</span>
-          <span className="ml-0.5 rounded-full bg-transparent px-1.5 py-0.2 text-[9px] font-mono text-blue-100">
+          <span className="hidden md:block ml-0.5 rounded-full bg-transparent px-1.5 py-0.2 text-[9px] font-mono text-blue-100">
             Ctrl P
           </span>
         </button>
