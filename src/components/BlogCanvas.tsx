@@ -42,7 +42,7 @@ export default function BlogCanvas({
   };
 
   return (
-    <article className="space-y-8 rounded-3xl border-none ring-0 p-4 sm:p-8 md:border md:border-zinc-800/80 md:ring-1 md:ring-white/5 md:p-10 bg-zinc-950/70 backdrop-blur-2xl shadow-2xl transition-all">
+    <article className="mt-20 border-none ring-0 md:border md:border-zinc-800/80 md:ring-1 md:ring-white/5 md:rounded-3xl bg-zinc-950/80 text-xs text-zinc-400 backdrop-blur-xl transition-colors">
       {/* Top Controls: View Tabs & Word Metric */}
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-(--border-color) pb-4">
         <div className="flex items-center gap-1.5 rounded-xl border border-(--border-color) p-1 bg-transparent">
