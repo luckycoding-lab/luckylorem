@@ -3,8 +3,8 @@ import { Coffee, GitBranchPlus, ArrowUpRight, Heart, Sparkles } from "lucide-rea
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-zinc-800/80 bg-zinc-950/80 text-xs text-zinc-400 backdrop-blur-xl ring-1 ring-white/5 transition-colors">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 grid grid-cols-1 gap-8 md:grid-cols-4">
+    <footer className="mt-20 md:border-none md:px-0 border-t rounded-full border-zinc-800/80 bg-zinc-950/80 text-xs text-zinc-400 backdrop-blur-xl ring-1 ring-white/5 transition-colors">
+      <div className="mx-auto max-w-7xl px-0 md:px-4 py-12 sm:px-6 lg:px-8 grid grid-cols-1 gap-8 md:grid-cols-4">
         
         {/* Brand Column */}
         <div className="space-y-3 md:col-span-1">

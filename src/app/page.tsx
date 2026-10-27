@@ -158,7 +158,7 @@ export default function Home() {
       />
 
       {/* 2. Main Content Stage */}
-      <main className="min-w-0 flex-1 p-4 pb-36 sm:p-8 lg:p-12">
+      <main className="min-w-0 flex-1 p-4 pb-36 md:p-0 lg:p-12">
         <div className="mx-auto max-w-4xl space-y-6">
           {/* Top Breadcrumb & Live Date Pill Header */}
           <div className="flex flex-col items-start justify-between gap-3 pb-3 sm:flex-row sm:items-center">
