@@ -34,7 +34,7 @@ export default function SidebarNav({
   return (
     <aside
       aria-label="Sidebar Navigation"
-      className="sticky top-0 flex h-screen w-60 flex-col justify-between border-r border-zinc-800/80 bg-transparent p-5 backdrop-blur-xl ring-1 ring-white/5 select-none"
+      className="hidden md:block sticky top-0 h-screen w-60 flex-col justify-between border-r border-zinc-800/80 bg-transparent p-5 backdrop-blur-xl ring-1 ring-white/5 select-none"
     >
       <div className="space-y-7">
         {/* Brand App Icon (Matching FloatingDock pill glow style) */}
