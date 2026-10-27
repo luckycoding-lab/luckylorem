@@ -1,11 +1,16 @@
 import Link from "next/link";
-import { Coffee, GitBranchPlus, ArrowUpRight, Heart, Sparkles } from "lucide-react";
+import {
+  Coffee,
+  GitBranchPlus,
+  ArrowUpRight,
+  Heart,
+  Sparkles,
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-none md:border md:px-0 border-t rounded-full border-zinc-800/80 bg-zinc-950/80 text-xs text-zinc-400 backdrop-blur-xl ring-1 ring-white/5 transition-colors">
+    <footer className="mt-20 border-none md:border md:px-0 border-t md:rounded-full border-zinc-800/80 bg-zinc-950/80 text-xs text-zinc-400 backdrop-blur-xl ring-1 ring-white/5 transition-colors">
       <div className="mx-auto max-w-7xl px-0 md:px-4 py-12 sm:px-6 lg:px-8 grid grid-cols-1 gap-8 md:grid-cols-4">
-        
         {/* Brand Column */}
         <div className="space-y-3 md:col-span-1">
           <div className="flex items-center gap-2.5">
@@ -17,7 +22,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-[11px] leading-relaxed text-zinc-500">
-            Curated developer dummy text and realistic layout filler for designers and engineers.
+            Curated developer dummy text and realistic layout filler for
+            designers and engineers.
           </p>
         </div>
 
@@ -28,20 +34,29 @@ export default function Footer() {
           </h4>
           <ul className="space-y-1.5 text-zinc-400">
             <li>
-              <a href="#categories" className="transition-colors hover:text-blue-400">
+              <a
+                href="#categories"
+                className="transition-colors hover:text-blue-400"
+              >
                 Categories
               </a>
             </li>
             <li>
-              <a href="#markdown" className="transition-colors hover:text-blue-400">
+              <a
+                href="#markdown"
+                className="transition-colors hover:text-blue-400"
+              >
                 Markdown Export
               </a>
             </li>
             <li>
-              <a href="#shortcuts" className="flex items-center gap-1.5 transition-colors hover:text-blue-400">
+              <a
+                href="#shortcuts"
+                className="flex items-center gap-1.5 transition-colors hover:text-blue-400"
+              >
                 <span>Shortcuts</span>
                 <span className="rounded-full border border-zinc-800 bg-zinc-900/90 px-1.5 py-0.5 text-[9px] font-mono text-zinc-500">
-                  ⌘K / ⌘S
+                  Ctrl H | Ctrl P
                 </span>
               </a>
             </li>
@@ -94,23 +109,23 @@ export default function Footer() {
           </h4>
           <ul className="space-y-1.5 text-zinc-400">
             <li>
-              <Link href="/privacy" className="transition-colors hover:text-blue-400">
+              <Link
+                href="/privacy"
+                className="transition-colors hover:text-blue-400"
+              >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="/terms" className="transition-colors hover:text-blue-400">
+              <Link
+                href="/terms"
+                className="transition-colors hover:text-blue-400"
+              >
                 Terms of Use
               </Link>
             </li>
-            <li>
-              <span className="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900/60 px-2 py-0.5 text-[10px] font-mono text-zinc-500">
-                MIT Open Source
-              </span>
-            </li>
           </ul>
         </div>
-
       </div>
 
       {/* Bottom Sub-bar */}
