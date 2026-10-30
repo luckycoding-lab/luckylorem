@@ -181,7 +181,7 @@ export default function Home() {
           {/* Article Presentation Container */}
           <article
             aria-label="Generated Article Content"
-            className="relative space-y-8 rounded-3xl border-none ring-0 p-4 sm:p-8 md:border md:border-zinc-800/80 md:ring-1 md:ring-white/5 md:p-10 bg-zinc-950/70 shadow-2xl backdrop-blur-2xl transition-all"
+            className="relative space-y-8 rounded-3xl border-none ring-0 p-0 sm:p-8 md:border md:border-zinc-800/80 md:ring-1 md:ring-white/5 md:p-10 bg-zinc-950/70 shadow-2xl backdrop-blur-2xl transition-all"
           >
             {/* View Switcher Tabs & Reading Time Statistics */}
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800/80 pb-5">
